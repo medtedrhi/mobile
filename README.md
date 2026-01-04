@@ -3,31 +3,17 @@
 A full-stack mobile application for renting and managing costumes. This project includes a React Native mobile frontend and a Laravel REST API backend with JWT authentication.
 for the backend source code " https://github.com/AyoubYousri/backend-costum.git "
 
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Tech Stack](#tech-stack)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Running the Application](#running-the-application)
-- [API Documentation](#api-documentation)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 
-This is a comprehensive costume rental platform that allows users to:
+
 - Browse and search for available costumes
 - Make and manage costume reservations
 - Handle user authentication and account management
 - Manage inventory (for sellers and admins)
 
-The application supports multiple user roles:
-- **Regular Users**: Browse and reserve costumes
+
+##Roles
 - **Sellers**: Manage their costume inventory and view reservations
 - **Admins**: Manage users, costumes, and system settings
 
@@ -35,47 +21,30 @@ The application supports multiple user roles:
 
 ### Frontend (Mobile)
 - **React Native** 0.82.1
-- **React** 19.1.1
-- **TypeScript** 5.8.3
-- **React Navigation** 7.1.22 (stack navigation)
-- **Async Storage** for local data persistence
-- **React Native Image Crop Picker** for image selection
-- **Jest** for testing
+
 
 ### Backend (API)
 - **Laravel** 12.0 (PHP 8.2+)
 - **JWT Authentication** (tymon/jwt-auth)
 - **MySQL/SQLite** database
-- **Vite** for frontend assets
-- **PHPUnit** for testing
+
 
 ### Build & Development Tools
-- **Expo / React Native CLI** for mobile development
+- **React Native CLI** for mobile development
 - **Gradle** for Android builds
-- **CocoaPods** for iOS dependencies
 - **Composer** for PHP dependencies
 - **npm** for JavaScript dependencies
 
 ## Features
 
-### User Features
-- User authentication (login/registration)
-- Browse costume catalogue
-- View detailed costume information
-- Create and manage reservations
-- Search and filter costumes
-
 ### Admin Features
 - User management (create, edit, delete)
 - Costume inventory management
-- Dashboard and analytics
-- System configuration and settings
 
 ### Seller Features
 - Manage personal costume inventory
-- View customer reservations
+- add customer reservations
 - Add/edit/delete costumes
-- Sales and rental tracking
 
 ## Project Structure
 
@@ -134,7 +103,6 @@ api-1/                   # Alternative API setup (same structure as api/)
 - **PHP** >= 8.2
 - **Composer**
 - **Android Studio** (for Android development)
-- **Xcode** (for iOS development on macOS)
 - **MySQL** or **SQLite** (for database)
 - **Git**
 
@@ -153,12 +121,7 @@ cd costume-rental-app
 # Install Node dependencies
 npm install
 
-# For iOS (macOS only)
-cd ios
-bundle install
-bundle exec pod install
-cd ..
-```
+
 
 ### 3. Install Backend Dependencies
 
@@ -181,7 +144,6 @@ Edit `src/config.ts` to set your API endpoint:
 
 ```typescript
 // Android emulator:   "http://10.0.2.2:8000/api"
-// iOS simulator:       "http://localhost:8000/api"
 // Physical device:     "http://192.168.1.10:8000/api" (use your machine IP)
 
 export const API_BASE_URL = 'http://localhost:8000/api';
@@ -244,9 +206,6 @@ npm start
 # Run on Android
 npm run android
 
-# Run on iOS (macOS)
-npm run ios
-```
 
 ### Android Development
 
@@ -259,41 +218,8 @@ cd android
 ./gradlew assembleDebug
 ```
 
-### iOS Development
 
-```bash
-# Build and run on iOS simulator
-npm run ios
 
-# Update Pods after dependency changes
-cd ios
-bundle exec pod install
-cd ..
-```
-
-## Testing
-
-### Mobile Tests
-
-```bash
-# Run Jest tests
-npm test
-
-# Run with coverage
-npm test -- --coverage
-```
-
-### Backend Tests
-
-```bash
-cd api
-
-# Run PHPUnit tests
-composer test
-
-# Or using PHP directly
-php artisan test
-```
 
 ## API Documentation
 
@@ -331,31 +257,59 @@ Authorization: Bearer <your-jwt-token>
 
 ## Screenshots
 
-Add your app screenshots below:
-
-### Mobile App Screenshots
-
 #### Catalogue Screen
 <img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/b19ea829-906a-476f-b99e-4ce18fbb4910" />
 
 
 #### Costume Details
-![Costume Details](./screenshots/costume-detail.png)
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/004fa874-cee7-400a-9a0c-d56de6996ce3" />
+
+
+#### Filter
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/889e1e2b-1150-4eb8-bb62-61db88ee3261" />
+
 
 #### Login Screen
-![Login Screen](./screenshots/login.png)
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/78ee457c-c0ea-4098-bbc8-7491536b1183" />
 
-#### User Reservations
-![My Reservations](./screenshots/my-reservations.png)
 
-#### Admin Dashboard
-![Admin Dashboard](./screenshots/admin-dashboard.png)
+#### Register Screen
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/1d68bc98-1198-4340-9d10-25b5b08412a5" />
 
-#### Admin Costume Management
-![Admin Costumes](./screenshots/admin-costumes.png)
 
 #### Seller Dashboard
-![Seller Dashboard](./screenshots/seller-dashboard.png)
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/d34edfc1-e474-42d5-b217-8b0262ace6a3" />
+
+
+#### Client's Reservations
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/39546e1d-c616-4b66-be9e-702fbe995c91" />
+
+
+#### Adding a costume
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/d283cb4e-e02d-45bd-9c23-edc530dcec8c" />
+
+
+#### reserving page
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/89f075ff-9870-4703-b62a-de6e0d744554" />
+
+
+#### Adding a costume page
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/1b03f6e8-53b4-48b7-b062-175d542744ef" />
+
+
+#### Admin Dashboard
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/1c9b1af8-7628-4402-8387-713507f4de6d" />
+
+
+#### Admin sellers Management
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/057b6806-10fe-4c7f-9e2e-03f474312a1a" />
+
+
+#### Admin Costume Management
+<img width="602" height="1280" alt="image" src="https://github.com/user-attachments/assets/9caa0fe8-0e32-4dad-a502-5d0d9af76d59" />
+
+
+
 
 ---
 
